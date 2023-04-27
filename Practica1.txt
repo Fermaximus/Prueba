@@ -1,0 +1,22 @@
+Datos:
+	C: Capacidad del camion
+	Candidatos: Caso A y C -> Paquetes(cada uno un peso p positivo real)
+		    Caso B -> Paquetes( cada uno con un oeso p y vallor v positivo reales)
+	Representacion Soluciones: Tuplas(x1,x2,...,xk) cada xk es un paquete si el valor es 1 se añade y si es 0 no;
+	Soluciones: Subconjuntos de paquetes culla suma de pesos es menor igual a C.
+Objetivo:
+	Caso A: Maximizar el numero de paquetes, es decir que la cantidad de posiciones a 1 de la tupla solucion sea maxima.
+	Caso B: Maximizar el valor de paquetes, es decir que la suma de los valores de los paquetes cuya posicion este a 1 sea maxima.
+	Caso C: Maximizar el peso transportado, es decir que la suma de los pesos de los paquetes cuya posicion sea 1 sea maxima.
+	Ordenacion:
+		    A: Creciente en peso.
+		    B: Decreciente en V/P.
+		    C: Decreciente peso.
+	Seleccion: El siguiente segun ordenación.
+	Factibilidad: Si la suma del nuevo paquete es <= C.
+	Solucion: 
+		  Caso A: -Suma == C
+			  -Quedarnos sin paquetes
+			  -Suma > C
+		  Caso B y C: -Suma == C
+			      -Quedarnos sin paquetes
